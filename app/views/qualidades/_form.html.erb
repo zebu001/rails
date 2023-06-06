@@ -1,0 +1,22 @@
+<%= form_with(model: qualidade) do |form| %>
+  <% if qualidade.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(qualidade.errors.count, "error") %> prohibited this qualidade from being saved:</h2>
+
+      <ul>
+        <% qualidade.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :descricao, style: "display: block" %>
+    <%= form.text_area :descricao %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

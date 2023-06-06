@@ -1,0 +1,47 @@
+<%= form_with(model: anime) do |form| %>
+  <% if anime.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(anime.errors.count, "error") %> prohibited this anime from being saved:</h2>
+
+      <ul>
+        <% anime.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+    <%= form.label :depoimento %>
+    <%= collection_select(:anime, :depoimento_id,Depoimento.all ,:id, :descricao)%>
+  </div>
+
+<div class="field">
+    <%= form.label :qualidade %>
+    <%= collection_select(:anime, :qualidade_id,Qualidade.all ,:id, :descricao)%>
+  </div>
+    
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :ano, style: "display: block" %>
+    <%= form.date_field :ano %>
+  </div>
+
+  <div>
+    <%= form.label :episodios, style: "display: block" %>
+    <%= form.number_field :episodios %>
+  </div>
+
+  <div>
+    <%= form.label :categoria, style: "display: block" %>
+    <%= form.text_area :categoria %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

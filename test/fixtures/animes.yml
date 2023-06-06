@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  ano: 2023-05-18
+  episodios: 1
+  categoria: MyText
+
+two:
+  nome: MyString
+  ano: 2023-05-18
+  episodios: 1
+  categoria: MyText

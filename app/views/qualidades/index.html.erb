@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Qualidades</h1>
+
+<div id="qualidades">
+  <% @qualidades.each do |qualidade| %>
+    <%= render qualidade %>
+    <p>
+      <%= link_to "Show this qualidade", qualidade %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New qualidade", new_qualidade_path %>

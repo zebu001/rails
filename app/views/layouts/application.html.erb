@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animes</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+         <style>
+     @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&display=swap');
+body {
+  background-color: #636485;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #4a9fdc;
+  text-align:center;
+  font-size: 46px;
+  margin:10;
+}
+
+#animes {
+  margin-top: 20px;
+  color:#120907; 
+}
+
+#animes div {
+  background-color:#e7d9ed;
+  border-radius: 15px;
+  padding: 35px;
+  margin-bottom: 20px;
+  text-align:justify;
+  height: 350px;
+  width: 350px;
+}
+
+#animes p {
+  margin-bottom: 10px;
+}
+
+#animes a {
+  color: #081cc9;
+  text-decoration: none;
+  font-size:15;
+}
+
+#animes a:hover {
+  text-decoration: underline;
+}
+
+    </style>
+      
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

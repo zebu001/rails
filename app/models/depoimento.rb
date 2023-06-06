@@ -1,0 +1,2 @@
+class Depoimento < ApplicationRecord
+end

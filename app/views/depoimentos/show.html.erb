@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @depoimento %>
+
+<div>
+  <%= link_to "Edit this depoimento", edit_depoimento_path(@depoimento) %> |
+  <%= link_to "Back to depoimentos", depoimentos_path %>
+
+  <%= button_to "Destroy this depoimento", @depoimento, method: :delete %>
+</div>
